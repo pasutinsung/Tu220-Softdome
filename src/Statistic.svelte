@@ -4,19 +4,19 @@ import { mode, subjects, askedSubject } from './stores.js';
   var xValues = [];
   var yValues = [];
   for (let i = 0; i < $subjects.length; i++) {
-    yValues.push($subjects[i].amount);
-    xValues.push($subjects[i].id);
+    xValues.push($subjects[i].amount);
+    yValues.push($subjects[i].id);
   }
 /*หาวิธีดึง ID กับ (Amount - Remaining) มาใส่ใน X กับ Y */
 function createChart() {
-    const chart = document.getElementById("myChart");
-    const myChart = new Chart(chart, {
+    const chart1 = document.getElementById("myChart1");
+    const myChart1 = new Chart(chart1, {
       type: "bar",
       data: {
-        labels: xValues,
+        labels: yValues,
         datasets: [{
-            label: "สถิติการขอโควตา(%)",
-            data: yValues,
+            label: "สถิติผู้ขอโควตา",
+            data: xValues,
             backgroundColor: [
               "rgba(255, 99, 132, 0.6)",
               "rgba(54, 162, 235, 0.6)",
@@ -45,17 +45,13 @@ function createChart() {
         },
       },
     });
-
+  }
   onMount(() => {
     createChart();
   });
-}
 </script>
-
-
-<h1>สถิติผู้การเปิดโควต้า</h1>
-{xValues} {yValues}
-<canvas id="myChart" width="600" height="600" ></canvas>
+<h1>สถิติการเปิดโควต้า</h1>
+<canvas id="myChart1" width="3" height="1" />
 <button on:click={()=>$mode='admin'}>Back to Menu</button>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Chonburi&family=Noto+Sans+Thai:wght@400;700&display=swap');

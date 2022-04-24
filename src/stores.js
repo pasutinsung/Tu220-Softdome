@@ -31,7 +31,7 @@ export let subjects = writable([
     section: 760001,
     teacher: 'วีรชัย อโณทัยไพบูรณ์',
     date: 'TU 13:30-16:30',
-    amount: 50,
+    amount: 20,
     remaining: 18,
     ApplicationDate: '02-04-2022'
   },
@@ -41,7 +41,7 @@ export let subjects = writable([
     section: 760001,
     teacher: 'วีรชัย อโณทัยไพบูรณ์',
     date: 'MO 09:30-12:30',
-    amount: 50,
+    amount: 30,
     remaining: 10,
     ApplicationDate: '02-04-2022'
   },
@@ -51,7 +51,7 @@ export let subjects = writable([
     section: 760002,
     teacher: 'วีรชัย อโณทัยไพบูรณ์',
     date: 'WE 13:30-16:30',
-    amount: 52,
+    amount: 50,
     remaining: 0,
     ApplicationDate: '02-04-2022'
   },

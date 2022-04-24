@@ -7,7 +7,7 @@
     <li class='subject'><button on:click={()=>$mode='Adds'}>เพิ่มรายวิชา</button></li>
     <li class='quota'><button on:click={()=>$mode='Quotaname'}>คำขอโควต้าที่ถูกส่ง</button></li>
     <li class='done'><button on:click={()=>$mode='DisplaysubAdmin'}>ลบรายวิชา</button></li>
-    <li class='done'><button on:click={()=>$mode='Statistic'}>สถิติผู้ขอวิชา</button></li>
+    <li class='done'><button on:click={()=>$mode='Statistic'}>สถิติการเปิดโควต้าวิชา</button></li>
     </ul>
   </nav>
 </body>

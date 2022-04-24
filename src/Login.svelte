@@ -156,12 +156,9 @@ h3 {
   #txt {
     display: flex;
     margin-left: 27px;
-    position: absolute;
-    top: 50px;
-    right: 100px;
     color: #ffffff;
-    font-size: 40px;
-    justify-content: flex-end;
+    font-size: 30px;
+    justify-content: flex-start;
   }
   .si {border: none;
   outline: none ;
