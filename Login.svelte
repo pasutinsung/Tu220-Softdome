@@ -23,30 +23,12 @@
       pin = '';
     }
   }
-  function Forgot() {
-    $islogin = false;
-    $mode = "Forgot";
+  function Signup() {
+      $mode = 'Signup';   
   }
-  function startTime() {
-    const today = new Date();
-    let h = today.getHours();
-    let m = today.getMinutes();
-    let s = today.getSeconds();
-    m = checkTime(m);
-    s = checkTime(s);
-    document.getElementById("txt").innerHTML = h + ":" + m + ":" + s;
-    setTimeout(startTime, 1000);
-  }
-
-  function checkTime(i) {
-    if (i < 10) {
-      i = "0" + i;
-    } // add zero in front of numbers < 10
-    return i;
-  }
+  
 </script>
-<main on:load={startTime()}>
-  <div id="txt" />
+<main>
   <body>
     <div class=login-box>
       <h3>เข้าสู่ระบบ(นักศึกษา/บุคลากร)</h3>
@@ -57,7 +39,7 @@
       <input type="password" bind:value={pin} placeholder="PIN">
       <button on:click={checkLogin} on:click={checkLogin_a}>Sign In</button>
       <br><br>
-      <button class = si on:click={Forgot}>Forgot password</button>
+      <button on:click={Signup()}>Sign up</button>
     </div>
   </body>
 
@@ -65,7 +47,9 @@
 <style> 
 @import url('https://fonts.googleapis.com/css2?family=Chonburi&family=Noto+Sans+Thai:wght@400;700&display=swap');
 body {
-
+  background: rgb(2,5,5,5);
+  margin: 0;
+  padding: 0; 
   background-size: cover;
   background-position: center;
   font-family: sans-serif;
@@ -82,7 +66,6 @@ body {
   transform: translate(-50%,-50%);
   box-sizing: border-box;
   padding:70px 30px ;
-  border-radius: 15px ;
 }
   
 .avatar {
@@ -151,30 +134,5 @@ h3 {
   color: #fff;
   font-size: 10px;
   border-radius: 20px;
-}
-
-  #txt {
-    display: flex;
-    margin-left: 27px;
-    position: absolute;
-    top: 50px;
-    right: 100px;
-    color: #ffffff;
-    font-size: 40px;
-    justify-content: flex-end;
-  }
-  .si {border: none;
-  outline: none ;
-  height: 40px;
-  width: 90px;
-  background: whitesmoke ;
-  color: #1c8adb;
-  font-size: 15px;
-  border-radius: 20px;
-  }
-  .si:hover {
-  cursor:pointer;
-  background:#1c8adb ;
-  color: #000 ;
 }
 </style>

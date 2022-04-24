@@ -1,8 +1,8 @@
 import { writable } from 'svelte/store';
 export let data = {
-  '1111': { number: '1234', pin: "1111", 
+  '1111': { number: '1111', pin: "1111", 
     prefix: 'นาย' ,
-    studentID: '1234',
+    studentID: '1111',
     name: 'มังคุด',
     lastname: 'ไข่เจียว',
     faculty: 'วิศวกรรมศาสตร์',
@@ -13,7 +13,15 @@ export let data = {
     name: 'มะละกอ',
     lastname: 'ไข่ตุ๋น',
     faculty: 'วิศวกรรมศาสตร์',
-    year: '3',}}
+    year: '3',},
+  '001': { number: '',pin: '',
+    prefix: '',
+    studentID: '001',
+    name: '',
+    lastname: '',
+    faculty: '',
+    year: '',},
+}
   
 let admin = { '1234': { number: '1234', pin: '1234' } }
 export let subjects = writable([

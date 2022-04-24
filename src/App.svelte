@@ -11,10 +11,14 @@
   import Adds from './Adds.svelte';
   import Profile from './Profile.svelte';
   import DisplaysubAdmin from './DisplaysubAdmin.svelte';
-  
+  import Forgot from './Forgot.svelte';
+  import Statistic from './Statistic.svelte';
 </script>
-{#if !$islogin}
+{#if !$islogin && !($mode == 'Forgot')}
   <Login/>
+
+{:else if !$islogin && $mode == "Forgot"}
+  <Forgot />
 {:else}
     {#if $mode == 'menu'}
       <Menu />
@@ -32,8 +36,10 @@
       <Adds />
     {:else if $mode == 'Profile'}
       <Profile />
-     {:else if $mode == 'DisplaysubAdmin'}
+    {:else if $mode == 'DisplaysubAdmin'}
       <DisplaysubAdmin />
+    {:else if $mode == 'Statistic'}
+      <Statistic />
     {/if}    
   <Logout />
 {/if}
